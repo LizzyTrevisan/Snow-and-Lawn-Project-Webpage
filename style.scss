@@ -1,0 +1,368 @@
+@import 'variables';
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  max-width: 100%;
+  background-color: transparent;  // Ensure body background is transparent
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;  // Adjust opacity for transparency effect
+  z-index: -1;  // Make sure background is behind the text/content
+  transition: opacity 1s ease, background-image 1s ease;  // Smooth transitions for opacity and image change
+}
+
+
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+}
+
+.tlt {
+  text-align: center;
+  margin: 30px;
+}
+
+nav {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;  
+    align-items: center;
+    width: 100%;
+
+    li {
+      position: relative;
+      margin-right: 15px;  // Added margin-right for spacing between items
+
+      a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+        display: block;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          background-color: #555;
+          color: #fff;
+        }
+      }
+
+      // &.about {
+      //   margin-left: auto; // This moves About Us to the far right
+      // }
+
+      // Dropdown menu styles
+      .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color:lightgray;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        min-width: 160px;
+        z-index: 1;
+
+        li {
+          padding: 10px;
+          a {
+            color: black;
+            padding: 10px;
+            &:hover {
+              background-color: #555;
+            }
+          }
+        }
+      }
+
+      &:hover .dropdown {
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+  .active {
+    margin: 50px;
+    background-color: #04AA6D;
+    width: 300px;
+    justify-items: center;
+  }
+
+footer {
+  background-color: #333; // Dark background for contrast
+  color: #f2f2f2; // Light text color for readability
+  padding: 20px 0; // Padding for the footer
+  text-align: center; // Center-align all content
+  font-size: 14px; // Slightly smaller font for footer text
+
+  p {
+    margin: 0; // Remove default margin
+    padding-bottom: 10px; // Space below copyright text
+  }
+
+  .Social {
+    list-style: none; // Remove default list styling
+    padding: 0;
+    margin: 0;
+    display: flex; // Flexbox for horizontal layout
+    justify-content: center; // Center the items horizontally
+    gap: 15px; // Space between each social media link
+
+    li {
+      margin: 0;
+
+      a {
+        color: #f2f2f2; // Light color for the links
+        text-decoration: none; // Remove underline
+        font-size: 16px; // Slightly larger for emphasis
+        transition: color 0.3s ease; // Smooth transition for hover effect
+
+        &:hover {
+          color: #1e90ff; // Change color on hover for emphasis
+        }
+      }
+    }
+  }
+}
+
+
+
+#testimonials {
+  background-color: $primary-color;
+  padding: 20px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .testimonial {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;  // Flexbox to place avatar and text side by side
+    align-items: center;  // Vertically center the content
+    justify-content: center;  // Horizontally center the content
+    height: 150px;
+
+    img {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin-right: 0;
+  
+    }
+
+    blockquote {
+      font-style: italic;
+      color: #555;
+      text-align: center;  // Center the text inside blockquote
+      flex-grow: 0.3;  // Allow the text to take up the remaining space
+      margin: 0;  
+
+      span {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #333;
+      }
+    }
+  }
+}
+
+  
+
+
+.promo {
+  display: flex; // Display promotions side by side
+  flex-wrap: wrap; // Wrap if there are many promotions
+  gap: 20px; // Space between each promotion
+  padding: 20px;
+  background-color:  rgb(61, 139, 64, 0.2);// Light background color for the promo section
+  border: 1px solid #ddd; // Border to define the section
+
+  .promotion-item {
+    flex: 1 1 30%; // Each item takes 30% width and can shrink/grow
+    background-color: #ffffff; // White background for each promotion
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Subtle shadow for each box
+    border-radius: 5px; // Rounded corners
+    text-align: center;
+    border: 1px solid #ececec;
+    transition: transform 0.3s ease; // Smooth hover effect
+
+    // Hover effect to slightly scale up
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    p {
+      font-size: 16px; // Font size for the promotion text
+      font-weight: 600; // Slightly bolder text
+      color: #333; // Dark text color for good contrast
+    }
+  }
+}
+
+#quote {
+  background-color: #f4f4f4;  // Light background for the section
+  padding: 40px 20px;
+  text-align: center;
+  color: #333;
+  font-family: Arial, sans-serif;
+
+  h2 {
+    font-size: 2rem;
+    color: $primary-color;  // Use primary color for headings
+    margin-bottom: 20px;
+  }
+
+  form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      box-sizing: border-box;  // Ensures padding is included in width
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+      }
+
+      &[type="number"] {
+        -moz-appearance: textfield;  // Removes the spinner in number input (Firefox)
+        -webkit-appearance: none;    // Removes the spinner in number input (Chrome/Safari)
+        appearance: none;            // Standard property to remove the spinner
+      }
+
+      &[type="number"]::-webkit-outer-spin-button,
+      &[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    .btnQuote {
+      background-color: $primary-color;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;  // Full width button
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+
+      &:active {
+        background-color: darken($primary-color, 20%);
+      }
+    }
+  }
+
+  #quoteOutput {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #333;
+  }
+}
+
+#about {
+  padding: 30px 15px; // Padding for the section
+  background-color: white;  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+
+  .txt {
+    font-size: 18px; // Uniform font size for text
+    font-weight: 400; // Normal weight for a clean look
+    color:black; // Darker blue for good readability
+    margin: 15px 0; // Margin between each paragraph
+    line-height: 1.5; // Slightly increased line height for readability
+
+    &:first-child {
+      font-size: 20px; // Slightly larger font for the first line (Objective)
+      font-weight: 500; // Semi-bold for emphasis
+    }
+  }
+}
+
+
+
+
+.pricing {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #555;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+#contact {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-top: 30px;
+
+}
+
+#contact h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.contact-info {
+  font-weight: bold;
+}

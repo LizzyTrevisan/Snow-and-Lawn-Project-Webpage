@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Lawn Mowing & Snow Removal</title>
+</head>
+<style>
+.payment-container {
+  display: flex;
+  justify-content: space-evenly; /* Distribute the items evenly */
+  align-items: center; /* Vertically center items */
+  text-align: center;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 2px;
+  padding: 10px 0; /* Optional: Adds some padding to the container */
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  flex-direction: column; /* Align icons and text vertically */
+  text-align: center;
+}
+
+.payment-option i, .payment-option span {
+  margin-right: 8px;
+  font-size: 24px; /* Set font size for icons */
+}
+</style>
+
+
+<body>
+  <header>
+    <p>
+      <h1 class="tlt">Welcome to Our Services</h1>
+    </p>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+       
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="about"><a href="#about">About Us</a></li>
+        <li>
+          <a href="#" style="float: right;">Other Services</a>
+          <ul class="dropdown">
+            <li><a href="https://www.affordablelawnandsnow.ca/" target="_blank">Example 1</a></li>
+            <li><a href="https://mowsnowpros.com/cities/calgary-lawn-care-snow-removal/" target="_blank">Example 2</a></li>
+            <li><a href="https://www.yardly.ca/" target="_blank">Example 3</a></li>
+            <li><a href="https://legendarylawnscalgary.ca/snow-removal" target="_blank">Example 4</a></li>
+            <li><a href="https://mowandsnow.ca/" target="_blank">Example 5</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="about" style="text-align: center;">
+  
+      <p class="txt">Objective: Provide quality lawn mowing and snow removal services.</p>
+      <p class="txt">Mission: Excellence in every detail of service.</p>
+      <p class="txt">Vision: A well-maintained environment for everyone.</p>
+    </section>
+
+<br>
+<br>
+
+<section class="promo">
+  <div id="promotions" 
+
+  
+   class="promotion-item active">
+      <p>Save 10% off your first service!</p>
+  </div>
+  <div id="promotions"
+   class="promotion-item active">
+      <p>Get a free lawn checkup with your winter snow removal service!</p>
+  </div>
+
+  <div id="promotions"
+  class="promotion-item active">
+     <p>15% off winter season services!</p>
+ </div>
+  </div>
+</section>
+
+
+
+<section id="quote">
+  <h2>Request a Quote</h2>
+  <form id="quoteForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" min="1" required>
+
+    <label for="landSize">Land Size (sq ft):</label>
+    <input type="number" id="landSize" required>
+
+    <p><button type="submit" class="btnQuote">Get Quote</button></p>
+  </form>
+  <div id="quoteOutput"></div>
+</section>
+
+
+<br>
+
+<br>
+
+
+<section id="testimonials">
+  <h2>What Our Customers Say</h2>
+  <div class="testimonial">
+      <img src="https://picsum.photos/50" alt="Customer Avatar">
+      <blockquote>
+          "The lawn mowing service was fantastic! My yard looks amazing every time."
+          <span>- Sarah L.</span>
+      </blockquote>
+  </div>
+  <div class="testimonial">
+      <img src="https://picsum.photos/50" alt="Customer Avatar">
+      <blockquote>
+          "Highly professional snow removal services. They were quick and efficient during the harsh winter!"
+          <span>- Michael B.</span>
+      </blockquote>
+  </div>
+  <div class="testimonial">
+      <img src="https://picsum.photos/50" alt="Customer Avatar">
+      <blockquote>
+          "Affordable and reliable. I recommend their yearly packages to everyone!"
+          <span>- Emily T.</span>
+      </blockquote>
+  </div>
+</section>
+
+ <!-- Contact Section -->
+ <section id="contact">
+  <h2>Contact Us</h2>
+  <p>If you have any questions or would like more information about our services, feel free to reach out to us:</p>
+  <p class="contact-info">Leiziane Trevisan Dardin</p>
+  <p class="contact-info">Email: <a href="mailto:leiziane.trevisan@gmail.com">leiziane.trevisan@gmail.com</a></p>
+</section>
+
+
+
+<div class="payment-container">
+  <!-- Cash -->
+  <div class="payment-option">
+    <p id="cash"></p>
+    <span>💵</span> Cash
+    <div class="pricing">$30 per visit</div>
+  </div>
+
+  <!-- Debit / Credit Card -->
+  <div class="payment-option">
+    <p id="card"></p>
+    <span>💳</span> Debit / Credit Card
+    <div class="pricing">$35 per visit</div>
+  </div>
+
+  <!-- Stripe -->
+  <div class="payment-option">
+    <p id="stripe"></p>
+    <i class="fab fa-stripe-s"></i> Stripe
+    <div class="pricing">$40 per visit</div>
+  </div>
+
+  <!-- PayPal -->
+  <div class="payment-option">
+    <p id="paypal"></p>
+    <i class="fab fa-cc-paypal"></i> PayPal
+    <div class="pricing">$40 per visit</div>
+  </div>
+</div>
+
+
+  
+
+
+      
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Leiziane Trevisan Dardin </p>
+
+
+    <ul class="Social">
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
